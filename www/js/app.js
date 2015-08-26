@@ -16,7 +16,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 
     }
     if (window.StatusBar) {
-      // org.apache.cordova.statusbar required
+      org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
   });
@@ -58,16 +58,32 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
       }
     })
-
-  .state('app.single', {
-    url: '/playlists/:playlistId',
+    .state('app.shirts', {
+      url: "/shirts",
+      views: {
+        'menuContent': {
+          templateUrl: 'templares/shirts.html'
+        }
+      }
+    })
+    .state('app.single', {
+    url: "/playlists/:playlistId",
     views: {
       'menuContent': {
         templateUrl: 'templates/playlist.html',
         controller: 'PlaylistCtrl'
       }
     }
+  })
+    .state('app.addresses', {
+    url: "/addresses",
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/addresses.html',
+        controller: 'AddressCtrl'
+      }
+    }
   });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/playlists');
+  $urlRouterProvider.otherwise('/app/browse');
 });
