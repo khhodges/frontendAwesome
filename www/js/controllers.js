@@ -1,4 +1,3 @@
-alert('controllersjs');
 angular.module('starter.controllers', [])
 
 .controller('AppCtrl', function($scope, $ionicModal, $timeout) {
@@ -43,39 +42,15 @@ angular.module('starter.controllers', [])
 })
 
 .controller('PlaylistsCtrl', function($scope) {
-  //alert('PlayListController2');
-  $scope.playlists = [{
-    title: 'Featured',
-    id: 1
-  }, {
-    title: 'Bestsellers',
-    id: 2
-  }, {
-    title: 'Current Affairs',
-    id: 3
-  }, {
-    title: 'Sports',
-    id: 4
-  }, {
-    title: 'Music',
-    id: 5
-  }, {
-    title: 'Trending',
-    id: 6
-  }, {
-    title: 'Animals',
-    id: 7
-  }, {
-    title: 'Seasonal',
-    id: 8
-  }];
-
-  function setName(title) {
-  $scope.title = this.title;
-  }
+  $scope.playlists = [
+    { title: 'Reggae', id: 1 },
+    { title: 'Chill', id: 2 },
+    { title: 'Dubstep', id: 3 },
+    { title: 'Indie', id: 4 },
+    { title: 'Rap', id: 5 },
+    { title: 'Cowbell', id: 6 }
+  ];
 })
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
-  alert('PlayListController3,' + $stateParams.playlistId);
-  $scope.name = $stateParams.playlistId;
 });
