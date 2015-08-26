@@ -58,7 +58,14 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
       }
     })
-
+    .state('app.shirts', {
+      url: "/shirts",
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/shirts.html'
+        }
+      }
+    })
   .state('app.single', {
     url: '/playlists/:playlistId',
     views: {
