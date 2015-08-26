@@ -68,8 +68,6 @@ angular.module('starter.controllers', [])
     title: 'Seasonal',
     id: 8
   }];
-
-  }
 })
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
