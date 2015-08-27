@@ -41,6 +41,33 @@ angular.module('starter.controllers', [])
   };
 })
 
+.controller('pressController', function($scope, $http) {
+ 
+    $scope.getData = function() {
+        $http.get("https://api.scalablepress.com/v2/categories", { params: { "key1": "value1", "key2": "value2" } })
+            .success(function(data) {
+                $scope.catList = data;
+            })
+            .error(function(data) {
+                alert("ERROR");
+            });
+    }
+})
+
+.controller('garmentController', function($scope, $http) {
+ 
+    $scope.getData = function() {
+        $http.get("https://api.scalablepress.com/v2/products/gildan-sweatshirt-crew", { params: { "key1": "value1", "key2": "value2" } })
+            .success(function(data) {
+                $scope.garmentList = data;
+            })
+            .error(function(data) {
+                alert("ERROR");
+            });
+    }
+})
+
+
 .controller('PlaylistsCtrl', function($scope) {
   //alert('PlayListController2');
   $scope.playlists = [{
